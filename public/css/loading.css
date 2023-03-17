@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+                                                
+}
+
+body {
+    background-color: black;
+}
+
+
+.bubbles {
+    
+    display: flex;
+    /* transition: opacity 5s, visibility 5s; */
+    /* transition: opacity 20s, visibility 15s;  the lenght of the loaders visibility */
+}
+
+.bubbles span {
+    position: relative; 
+    width: .75rem;
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+    margin: 0 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(252, 251, 187),
+    0 0 50px rgb(252, 251, 187), /* layering shadows */ 
+    0 0 100px rgb(252, 251, 187);
+    animation: animate 8s linear infinite;
+    animation-duration: calc(5s / var(--i)); /* using the variable from the html, divide by the number of sec here will result in the 
+    speed of the animation and since i used different times for of the span class thats how i get the move them at different times*/
+    
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0); /* scaling it from the Y-axis, going for beamed up look (fun fact *beamed up is slang for "To get high on drugs" lol)*/
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* pop-up box */
+
+.popUpBox {
+    display: none; /* get the property here to connect the js script */
+}
+
+.contentwrapper {
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    width: 4rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer; 
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+a:hover {
+    background-color: brown;
+    box-shadow: 0 0 0 10px brown,
+    0 0 50px brown,
+    0 0 100px brown;
+
+}
+
+.tinyText {
+
+    font-size: .30rem;
+}
+
+p{
+    text-align: center;
+}
+
+
+
+
