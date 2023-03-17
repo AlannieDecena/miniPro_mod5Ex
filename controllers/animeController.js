@@ -13,4 +13,6 @@ const animeinfo = (req, res) => {
 
 }
 
+
+
 module.exports = {animeinfo}

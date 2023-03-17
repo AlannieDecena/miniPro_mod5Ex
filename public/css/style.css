@@ -1,0 +1,77 @@
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    background: 
+      repeating-linear-gradient(  /* making repeating lines from the right*/
+        to right,
+        transparent,
+        transparent 50px, /* each square are 50px wide   */
+        rgb(0, 0, 0) 50px,  /* the first line in that sequence creates black horizontal */
+        rgb(0, 0, 0) 55px  /* second creates a black vertical stripes. */
+
+      ),
+      repeating-linear-gradient( /* making repeating lines from the bottom*/
+        to bottom,
+        transparent,
+        transparent 50px,
+        rgb(0, 0, 0) 50px,
+        rgb(0, 0, 0) 55px
+      ),
+      linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+
+
+  .boxinside {
+    margin: 0%;
+    width: 10rem;
+    height: 20rem;
+    background-color: rgb(0, 0, 0);
+   
+ 
+  }
+  /* link for the door */
+  a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .door {
+    margin: 0%;
+    width: 10rem;
+    height: 20rem;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    position:absolute; /* to keep the in place*/
+    transition: 1s;
+    transform-origin: left; /* to keep keep one side of door from moving*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .door:hover{
+   transform: rotateY(45deg);  /* used this to property to animate the door opening and closing when hovered*/
+  }
+
+  .doorknob {
+    width: .75rem; /* used rem to keep shape when resizing screen */ 
+    height: .75rem;
+    border-radius: 10px;
+    background-color: black;
+    margin: 10px;
+   
+
+  }
+
+  
+ .fixed-bottom {  
+    width: 100%;
+    height: 23vh;
+    background-color: rgb(0, 0, 0);
+    border-top: 5px solid black;
+  }
